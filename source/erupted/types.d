@@ -1,3 +1,11 @@
+deprecated( "
+
+Developement information: Project ErupteD has been un-deprecated.
+ErupteD-V2 is not ready to be released, hence no need for ErupteD-V1.
+
+"
+)
+
 module erupted.types;
 
 alias uint8_t = ubyte;
@@ -4008,7 +4016,7 @@ version( VK_USE_PLATFORM_XLIB_KHR ) {
 	enum VK_KHR_XLIB_SURFACE_EXTENSION_NAME = "VK_KHR_xlib_surface";
 
 	alias VkXlibSurfaceCreateFlagsKHR = VkFlags;
-	
+
 	struct VkXlibSurfaceCreateInfoKHR {
 		VkStructureType              sType = VK_STRUCTURE_TYPE_XLIB_SURFACE_CREATE_INFO_KHR;
 		const( void )*               pNext;
@@ -4026,7 +4034,7 @@ version( VK_USE_PLATFORM_XCB_KHR ) {
 	enum VK_KHR_XCB_SURFACE_EXTENSION_NAME = "VK_KHR_xcb_surface";
 
 	alias VkXcbSurfaceCreateFlagsKHR = VkFlags;
-	
+
 	struct VkXcbSurfaceCreateInfoKHR {
 		VkStructureType             sType = VK_STRUCTURE_TYPE_XCB_SURFACE_CREATE_INFO_KHR;
 		const( void )*              pNext;
@@ -4046,7 +4054,7 @@ version( VK_USE_PLATFORM_WAYLAND_KHR ) {
 	alias VkWaylandSurfaceCreateFlagsKHR = VkFlags;
 	alias wl_surface = wl_proxy;
 
-	
+
 	struct VkWaylandSurfaceCreateInfoKHR {
 		VkStructureType                 sType = VK_STRUCTURE_TYPE_WAYLAND_SURFACE_CREATE_INFO_KHR;
 		const( void )*                  pNext;
@@ -4064,7 +4072,7 @@ version( VK_USE_PLATFORM_MIR_KHR ) {
 	enum VK_KHR_MIR_SURFACE_EXTENSION_NAME = "VK_KHR_mir_surface";
 
 	alias VkMirSurfaceCreateFlagsKHR = VkFlags;
-	
+
 	struct VkMirSurfaceCreateInfoKHR {
 		VkStructureType             sType = VK_STRUCTURE_TYPE_MIR_SURFACE_CREATE_INFO_KHR;
 		const( void )*              pNext;
@@ -4082,7 +4090,7 @@ version( VK_USE_PLATFORM_ANDROID_KHR ) {
 	enum VK_KHR_ANDROID_SURFACE_EXTENSION_NAME = "VK_KHR_android_surface";
 
 	alias VkAndroidSurfaceCreateFlagsKHR = VkFlags;
-	
+
 	struct VkAndroidSurfaceCreateInfoKHR {
 		VkStructureType                 sType = VK_STRUCTURE_TYPE_ANDROID_SURFACE_CREATE_INFO_KHR;
 		const( void )*                  pNext;
@@ -4099,7 +4107,7 @@ version( VK_USE_PLATFORM_WIN32_KHR ) {
 	enum VK_KHR_WIN32_SURFACE_EXTENSION_NAME = "VK_KHR_win32_surface";
 
 	alias VkWin32SurfaceCreateFlagsKHR = VkFlags;
-	
+
 	struct VkWin32SurfaceCreateInfoKHR {
 		VkStructureType               sType = VK_STRUCTURE_TYPE_WIN32_SURFACE_CREATE_INFO_KHR;
 		const( void )*                pNext;
@@ -4304,10 +4312,10 @@ struct VkExportMemoryAllocateInfoKHR {
 
 // VK_KHR_external_memory_win32
 version( VK_USE_PLATFORM_WIN32_KHR ) {
-	
+
 	enum VK_KHR_EXTERNAL_MEMORY_WIN32_SPEC_VERSION = 1;
 	enum VK_KHR_EXTERNAL_MEMORY_WIN32_EXTENSION_NAME = "VK_KHR_external_memory_win32";
-	
+
 	struct VkImportMemoryWin32HandleInfoKHR {
 		VkStructureType                        sType = VK_STRUCTURE_TYPE_IMPORT_MEMORY_WIN32_HANDLE_INFO_KHR;
 		const( void )*                         pNext;
@@ -4315,7 +4323,7 @@ version( VK_USE_PLATFORM_WIN32_KHR ) {
 		HANDLE                                 handle;
 		LPCWSTR                                name;
 	}
-	
+
 	struct VkExportMemoryWin32HandleInfoKHR {
 		VkStructureType                sType = VK_STRUCTURE_TYPE_EXPORT_MEMORY_WIN32_HANDLE_INFO_KHR;
 		const( void )*                 pNext;
@@ -4323,13 +4331,13 @@ version( VK_USE_PLATFORM_WIN32_KHR ) {
 		DWORD                          dwAccess;
 		LPCWSTR                        name;
 	}
-	
+
 	struct VkMemoryWin32HandlePropertiesKHR {
 		VkStructureType  sType = VK_STRUCTURE_TYPE_MEMORY_WIN32_HANDLE_PROPERTIES_KHR;
 		void*            pNext;
 		uint32_t         memoryTypeBits;
 	}
-	
+
 	struct VkMemoryGetWin32HandleInfoKHR {
 		VkStructureType                        sType = VK_STRUCTURE_TYPE_MEMORY_GET_WIN32_HANDLE_INFO_KHR;
 		const( void )*                         pNext;
@@ -4450,10 +4458,10 @@ struct VkExportSemaphoreCreateInfoKHR {
 
 // VK_KHR_external_semaphore_win32
 version( VK_USE_PLATFORM_WIN32_KHR ) {
-	
+
 	enum VK_KHR_EXTERNAL_SEMAPHORE_WIN32_SPEC_VERSION = 1;
 	enum VK_KHR_EXTERNAL_SEMAPHORE_WIN32_EXTENSION_NAME = "VK_KHR_external_semaphore_win32";
-	
+
 	struct VkImportSemaphoreWin32HandleInfoKHR {
 		VkStructureType                           sType = VK_STRUCTURE_TYPE_IMPORT_SEMAPHORE_WIN32_HANDLE_INFO_KHR;
 		const( void )*                            pNext;
@@ -4463,7 +4471,7 @@ version( VK_USE_PLATFORM_WIN32_KHR ) {
 		HANDLE                                    handle;
 		LPCWSTR                                   name;
 	}
-	
+
 	struct VkExportSemaphoreWin32HandleInfoKHR {
 		VkStructureType                sType = VK_STRUCTURE_TYPE_EXPORT_SEMAPHORE_WIN32_HANDLE_INFO_KHR;
 		const( void )*                 pNext;
@@ -4471,7 +4479,7 @@ version( VK_USE_PLATFORM_WIN32_KHR ) {
 		DWORD                          dwAccess;
 		LPCWSTR                        name;
 	}
-	
+
 	struct VkD3D12FenceSubmitInfoKHR {
 		VkStructureType     sType = VK_STRUCTURE_TYPE_D3D12_FENCE_SUBMIT_INFO_KHR;
 		const( void )*      pNext;
@@ -4480,7 +4488,7 @@ version( VK_USE_PLATFORM_WIN32_KHR ) {
 		uint32_t            signalSemaphoreValuesCount;
 		const( uint64_t )*  pSignalSemaphoreValues;
 	}
-	
+
 	struct VkSemaphoreGetWin32HandleInfoKHR {
 		VkStructureType                           sType = VK_STRUCTURE_TYPE_SEMAPHORE_GET_WIN32_HANDLE_INFO_KHR;
 		const( void )*                            pNext;
@@ -4694,10 +4702,10 @@ struct VkExportFenceCreateInfoKHR {
 
 // VK_KHR_external_fence_win32
 version( VK_USE_PLATFORM_WIN32_KHR ) {
-	
+
 	enum VK_KHR_EXTERNAL_FENCE_WIN32_SPEC_VERSION = 1;
 	enum VK_KHR_EXTERNAL_FENCE_WIN32_EXTENSION_NAME = "VK_KHR_external_fence_win32";
-	
+
 	struct VkImportFenceWin32HandleInfoKHR {
 		VkStructureType                       sType = VK_STRUCTURE_TYPE_IMPORT_FENCE_WIN32_HANDLE_INFO_KHR;
 		const( void )*                        pNext;
@@ -4707,7 +4715,7 @@ version( VK_USE_PLATFORM_WIN32_KHR ) {
 		HANDLE                                handle;
 		LPCWSTR                               name;
 	}
-	
+
 	struct VkExportFenceWin32HandleInfoKHR {
 		VkStructureType                sType = VK_STRUCTURE_TYPE_EXPORT_FENCE_WIN32_HANDLE_INFO_KHR;
 		const( void )*                 pNext;
@@ -4715,7 +4723,7 @@ version( VK_USE_PLATFORM_WIN32_KHR ) {
 		DWORD                          dwAccess;
 		LPCWSTR                        name;
 	}
-	
+
 	struct VkFenceGetWin32HandleInfoKHR {
 		VkStructureType                       sType = VK_STRUCTURE_TYPE_FENCE_GET_WIN32_HANDLE_INFO_KHR;
 		const( void )*                        pNext;
@@ -5576,14 +5584,14 @@ version( VK_USE_PLATFORM_WIN32_KHR ) {
 
 	enum VK_NV_EXTERNAL_MEMORY_WIN32_SPEC_VERSION = 1;
 	enum VK_NV_EXTERNAL_MEMORY_WIN32_EXTENSION_NAME = "VK_NV_external_memory_win32";
-	
+
 	struct VkImportMemoryWin32HandleInfoNV {
 		VkStructureType                    sType = VK_STRUCTURE_TYPE_IMPORT_MEMORY_WIN32_HANDLE_INFO_NV;
 		const( void )*                     pNext;
 		VkExternalMemoryHandleTypeFlagsNV  handleType;
 		HANDLE                             handle;
 	}
-	
+
 	struct VkExportMemoryWin32HandleInfoNV {
 		VkStructureType                sType = VK_STRUCTURE_TYPE_EXPORT_MEMORY_WIN32_HANDLE_INFO_NV;
 		const( void )*                 pNext;
@@ -5594,10 +5602,10 @@ version( VK_USE_PLATFORM_WIN32_KHR ) {
 
 // VK_NV_win32_keyed_mutex
 version( VK_USE_PLATFORM_WIN32_KHR ) {
-	
+
 	enum VK_NV_WIN32_KEYED_MUTEX_SPEC_VERSION = 1;
 	enum VK_NV_WIN32_KEYED_MUTEX_EXTENSION_NAME = "VK_NV_win32_keyed_mutex";
-	
+
 	struct VkWin32KeyedMutexAcquireReleaseInfoNV {
 		VkStructureType           sType = VK_STRUCTURE_TYPE_WIN32_KEYED_MUTEX_ACQUIRE_RELEASE_INFO_NV;
 		const( void )*            pNext;
@@ -6064,7 +6072,7 @@ enum VK_EXT_DIRECT_MODE_DISPLAY_EXTENSION_NAME = "VK_EXT_direct_mode_display";
 
 // VK_EXT_acquire_xlib_display
 version( VK_USE_PLATFORM_XLIB_KHR ) {
-	
+
 	enum VK_EXT_ACQUIRE_XLIB_DISPLAY_SPEC_VERSION = 1;
 	enum VK_EXT_ACQUIRE_XLIB_DISPLAY_EXTENSION_NAME = "VK_EXT_acquire_xlib_display";
 }
